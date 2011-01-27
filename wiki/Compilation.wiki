@@ -18,5 +18,6 @@ extension=blake.so
 Compilation in Windows is harder and requires:
 * Microsoft Visual C++ (6.0 or 9)
 * Windows SDK
-*: Some binary tools
+* Some binary tools
+
 The [http://wiki.php.net/internals/windows/stepbystepbuild wiki site of PHP] describes perfectly how to build PHP and PECL extensions step by step.
