@@ -9,10 +9,13 @@ phpize
 ./configure
 make
 make test
+make install
 }}}
 
-Finally, copy blake.so into the PHP extension dir and add "extension" directive to php.ini as follows:
+Add "extension" directive to php.ini as follows:
+{{{
 extension=blake.so
+}}}
 
 = Windows =
 Compilation in Windows is harder and requires:
