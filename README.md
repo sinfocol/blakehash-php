@@ -37,54 +37,54 @@ This PHP extension is composed by five functions: blake, blake_file, blake_init,
 
 Both, blake and blake_file are used to parse strings and files, the rest of the functions are used for incremental hashing. 
 ### Details
-| | |
-| - | - |
-| **Function name** | blake() |
-| **Description** | ```string blake ( string $data , int $type [, string $salt [, bool $raw_output = false ]] )``` |
-| **Parameters** | |
-| data | Message to be hashed. |
-| type | Type of instace to use. It must be: BLAKE_224, BLAKE_256, BLAKE_384 or BLAKE_512. |
-| salt | Salt to use. When use BLAKE_224 or BLAKE_256, salt must be 16 bytes, Otherwise, it must be 32 bytes, or a null string for use with raw_output. |
-| raw_output | When set to true, outputs raw binary data. |
-| **Return values** | Returns a string containing the calculated message digest as lowercase hexits unless raw_output is set to true in which case the raw binary representation of the message digest is returned. |
+&nbsp; | &nbsp;
+------ | ------
+**Function name** | blake()
+**Description** | ```string blake ( string $data , int $type [, string $salt [, bool $raw_output = false ]] )```
+**Parameters** | &nbsp;
+data | Message to be hashed.
+type | Type of instace to use. It must be: BLAKE_224, BLAKE_256, BLAKE_384 or BLAKE_512.
+salt | Salt to use. When use BLAKE_224 or BLAKE_256, salt must be 16 bytes, Otherwise, it must be 32 bytes, or a null string for use with raw_output.
+raw_output | When set to true, outputs raw binary data.
+**Return values** | Returns a string containing the calculated message digest as lowercase hexits unless raw_output is set to true in which case the raw binary representation of the message digest is returned.
 
-| | |
-| - | - |
-| **Function name** | blake_file() |
-| **Description** | ```string blake_file ( string $filename , int $type [, string $salt [, bool $raw_output = false ]] )``` |
-| **Parameters** | |
-| filename | URL describing location of file to be hashed; Supports fopen wrappers. |
-| type | Type of instace to use. It must be: BLAKE_224, BLAKE_256, BLAKE_384 or BLAKE_512. |
-| salt | Salt to use. When use BLAKE_224 or BLAKE_256, salt must be 16 bytes, Otherwise, it must be 32 bytes, or a null string for use with raw_output. |
-| raw_output | When set to true, outputs raw binary data. |
-| **Return values** | Returns a string containing the calculated message digest as lowercase hexits unless raw_output is set to true in which case the raw binary representation of the message digest is returned. |
+&nbsp; | &nbsp;
+------ | ------
+**Function name** | blake_file()
+**Description** | ```string blake_file ( string $filename , int $type [, string $salt [, bool $raw_output = false ]] )```
+**Parameters** | &nbsp;
+filename | URL describing location of file to be hashed; Supports fopen wrappers.
+type | Type of instace to use. It must be: BLAKE_224, BLAKE_256, BLAKE_384 or BLAKE_512.
+salt | Salt to use. When use BLAKE_224 or BLAKE_256, salt must be 16 bytes, Otherwise, it must be 32 bytes, or a null string for use with raw_output.
+raw_output | When set to true, outputs raw binary data.
+**Return values** | Returns a string containing the calculated message digest as lowercase hexits unless raw_output is set to true in which case the raw binary representation of the message digest is returned.
 
-| | |
-| - | - |
-| **Function name** | blake_init() |
-| **Description** | ```resource blake_init ( int $type [, string $salt ] )``` |
-| **Parameters** | |
-| type | Type of instace to use. It must be: BLAKE_224, BLAKE_256, BLAKE_384 or BLAKE_512. |
-| salt | Salt to use. When use BLAKE_224 or BLAKE_256, salt must be 16 bytes, Otherwise, it must be 32 bytes, or a null string for use with raw_output. |
-| **Return values** | Returns a Blake state resource for use with blake_update() and blake_final(). |
+&nbsp; | &nbsp;
+------ | ------
+**Function name** | blake_init()
+**Description** | ```resource blake_init ( int $type [, string $salt ] )```
+**Parameters** | &nbsp;
+type | Type of instace to use. It must be: BLAKE_224, BLAKE_256, BLAKE_384 or BLAKE_512.
+salt | Salt to use. When use BLAKE_224 or BLAKE_256, salt must be 16 bytes, Otherwise, it must be 32 bytes, or a null string for use with raw_output.
+**Return values** | Returns a Blake state resource for use with blake_update() and blake_final().
 
-| | |
-| - | - |
-| **Function name** | blake_update() |
-| **Description** | ```bool blake_update ( resource $state, string $data )``` |
-| **Parameters** | |
-| state | Blake state returned by blake_init() |
-| data | Message to be updated in the incremental hashing. |
-| **Return values** | Returns TRUE. |
+&nbsp; | &nbsp;
+------ | ------
+**Function name** | blake_update()
+**Description** | ```bool blake_update ( resource $state, string $data )```
+**Parameters** | &nbsp;
+state | Blake state returned by blake_init()
+data | Message to be updated in the incremental hashing.
+**Return values** | Returns TRUE.
 
-| | |
-| - | - |
-| **Function name** | blake_final() |
-| **Description** | ```string blake_final ( resource $state [, bool $raw_output = false ] )``` |
-| **Parameters** | |
-| state | Blake state returned by blake_init() |
-| raw_output | When set to true, outputs raw binary data. |
-| **Return values** | Returns a string containing the calculated message digest as lowercase hexits unless raw_output is set to true in which case the raw binary representation of the message digest is returned. |
+&nbsp; | &nbsp;
+------ | ------
+**Function name** | blake_final()
+**Description** | ```string blake_final ( resource $state [, bool $raw_output = false ] )```
+**Parameters** | &nbsp;
+state | Blake state returned by blake_init()
+raw_output | When set to true, outputs raw binary data.
+**Return values** | Returns a string containing the calculated message digest as lowercase hexits unless raw_output is set to true in which case the raw binary representation of the message digest is returned.
 
 ## Examples
 ```php
