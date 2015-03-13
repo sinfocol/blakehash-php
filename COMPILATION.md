@@ -1,4 +1,4 @@
-# Linux =
+# Linux
 Download source code and extract to a folder called blake, then you have to run the next commands.
 ```
 cd blake
